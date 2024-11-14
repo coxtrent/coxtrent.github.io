@@ -44,7 +44,5 @@ function playGame(playerChoice) {
 }
 
 document.body.addEventListener('click', function() {
-    const bgm = document.getElementById('bgm');
-    bgm.volume = 0.5;
-    bgm.play();
+    const bgm = document.getElementById('bgm').play();
 });
