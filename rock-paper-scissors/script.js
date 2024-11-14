@@ -1,8 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const bgm = document.getElementById('bgm');
+    bgm.volume = 0.5; // Set the volume to 50%
+});
+
 
 const choices = ['rock', 'paper', 'scissors'];
 const resultDiv = document.getElementById('result');
-tieSound = document.getElementById('tie-sound');
-tieSound.volume = 0.5; // Set the volume to 50%
 
 document.getElementById('rock').addEventListener('click', () => playGame('rock'));
 document.getElementById('paper').addEventListener('click', () => playGame('paper'));
@@ -34,6 +37,9 @@ function playGame(playerChoice) {
 
     resultDiv.textContent = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
     const playThisSound = document.getElementById(sound).cloneNode();
+    if(sound === 'tie-sound'){
+        playThisSound.volume = 0.5;
+    }
     playThisSound.play();
 }
 
