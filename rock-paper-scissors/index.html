@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <style>
+        .result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock, Paper, Scissors</h1><br><br>
+    <img id="rock" src="rock.webp" style="width:25%;height:auto;">
+    <img id="paper" src="paper.jpeg" style="width:20%;height:auto;transform:rotate(90deg);">
+    <img id="scissors" src="scissors.png" style="width:20%;height:auto;transform:rotate(90deg);">
+    <div class="result" id="result"preload="auto"></div>
+    <img src="" alt="" id="result-pic"preload="auto">
+    <br><br>
+    <p>This game has background music but your browser might not let it autoplay.</p>
+    <button id="play-bgm">Play background music</button><br>
+    <button id="play-evil-bgm" style="background-color:red">քʟǟʏ ɛʋɨʟ ɮǟƈӄɢʀօʊռɖ ʍʊֆɨƈ</button>
+
+
+    <audio id="win-sound" src="win-sound.mp3" preload="auto"></audio>
+    <audio id="lose-sound" src="lose-sound.mp3" preload="auto"></audio>
+    <audio id="tie-sound" src="tie-sound.mp3" preload="auto"></audio>
+    <audio id="bgm" src="bgm.mp3" preload="auto" loop autoplay></audio>
+    <audio id="evil-bgm" src="evil-bgm.mp3" preload="auto" loop></audio>
+    
+
+    <script src="script.js" defer></script>
+</body>
+</html>
