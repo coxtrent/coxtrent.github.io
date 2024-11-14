@@ -32,8 +32,8 @@ document.getElementById('paper').addEventListener('click', () => playGame('paper
 document.getElementById('scissors').addEventListener('click', () => playGame('scissors'));
 
 resultPic = document.getElementById('result-pic');
-resultPic.style.height = '200px';
-resultPic.style.width = 'auto';
+resultPic.style.height = 'auto';
+resultPic.style.width = '20%';
 
 function playGame(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -53,7 +53,7 @@ function playGame(playerChoice) {
         sound = 'win-sound';
     } else {
         result = 'You lose!';
-        resultPic.src = 'L.jpg';
+        resultPic.src = 'L.png';
         sound = 'lose-sound';
     }
 
