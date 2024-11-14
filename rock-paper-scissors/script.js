@@ -3,29 +3,6 @@ const choices = ['rock', 'paper', 'scissors'];
 const resultDiv = document.getElementById('result');
 tieSound = document.getElementById('tie-sound');
 tieSound.volume = 0.5; // Set the volume to 50%
-bgm = document.getElementById('bgm');
-const evilBgm = document.getElementById('evil-bgm');
-evilBgm.volume = 0.5; // Set the volume to 50%
-
-bgm.volume = 0.5; // Set the volume to 50%
-
-bgm.play().catch(error => {
-    console.log('Autoplay was prevented:', error);
-});
-
-document.getElementById('play-bgm').addEventListener('click', () => {
-    if (bgm.paused) {
-        bgm.play();
-        evilBgm.pause();
-    }
-});
-
-document.getElementById('play-evil-bgm').addEventListener('click', () => {
-    if (evilBgm.paused) {
-        evilBgm.play();
-        bgm.pause();
-    }
-});
 
 document.getElementById('rock').addEventListener('click', () => playGame('rock'));
 document.getElementById('paper').addEventListener('click', () => playGame('paper'));
@@ -59,3 +36,9 @@ function playGame(playerChoice) {
     const playThisSound = document.getElementById(sound).cloneNode();
     playThisSound.play();
 }
+
+document.body.addEventListener('click', function() {
+    document.getElementById('bgm').play().catch(error => {
+        console.log('Autoplay was prevented:', error);
+    });
+});
