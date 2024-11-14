@@ -18,7 +18,7 @@ function playGame(playerChoice) {
     let result = '';
 
     if (playerChoice === computerChoice) {
-        result = 'It\'s a tie!';
+        result = 'Tie!';
         sound = 'tie-sound';
         resultPic.src = 'khaby-really.gif';
     } else if (
@@ -26,16 +26,16 @@ function playGame(playerChoice) {
         (playerChoice === 'paper' && computerChoice === 'rock') ||
         (playerChoice === 'scissors' && computerChoice === 'paper')
     ) {
-        result = 'You win!';
+        result = 'W';
         resultPic.src = 'W.webp';
         sound = 'win-sound';
     } else {
-        result = 'You lose!';
+        result = 'L';
         resultPic.src = 'L.png';
         sound = 'lose-sound';
     }
 
-    resultDiv.textContent = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
+    resultDiv.textContent = `You choose ${playerChoice}, CPU chooses ${computerChoice}.\n${result}`;
     const playThisSound = document.getElementById(sound).cloneNode();
     if(sound === 'tie-sound'){
         playThisSound.volume = 0.5;
@@ -44,7 +44,7 @@ function playGame(playerChoice) {
 }
 
 document.body.addEventListener('click', function() {
-    document.getElementById('bgm').play().catch(error => {
-        console.log('Autoplay was prevented:', error);
-    });
+    const bgm = document.getElementById('bgm');
+    bgm.volume = 0.5;
+    bgm.play();
 });
