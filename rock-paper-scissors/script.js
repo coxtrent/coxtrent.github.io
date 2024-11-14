@@ -32,8 +32,6 @@ document.getElementById('paper').addEventListener('click', () => playGame('paper
 document.getElementById('scissors').addEventListener('click', () => playGame('scissors'));
 
 resultPic = document.getElementById('result-pic');
-resultPic.style.height = 'auto';
-resultPic.style.width = '20%';
 
 function playGame(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
