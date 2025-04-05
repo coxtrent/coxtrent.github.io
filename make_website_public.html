@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme-mode="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Make Your Website Public</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaZt8t1H9eHf5zI1t6e9e9e9e9e9e9e9e9e9e9e9e9e9e" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.5;   
+        }
+        nav {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #f6f8fa;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #0366d6;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="step-0-setup-and-explanation">Step 0: Setup & Explanation</a></li>
+            <li><a href="#step-1-buy-a-domain">Step 1: Buy a Domain</a></li>
+            <li><a href="#step-2-choose-hosting">Step 2: Choose Hosting</a></li>
+            <li><a href="#step-3-deploy-your-website">Step 3: Deploy Your Website</a></li>
+            <li><a href="#step-4-test-your-website">Step 4: Test Your Website</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main class="container-lg px-3 my-5 markdown-body">
+        <header class="primer-spec-topbar position-fixed width-full top-0 left-0 py-2">
+            <div class="container-lg">
+                <h1>How to Make Your Website Public</h1>
+            </div>
+        </header>
+        <h1 id="introduction">Introduction</h1>
+        <h2>Welcome, Geniuses</h2>
+        <img src="https://www.hiddengeniusproject.org/wp-content/uploads/2019/09/HGPAssets_PrimaryLogo_Yellow.png" alt="Hidden Genius Project Logo" style="width: 200px; height: auto;">
+        <p>Some of you have asked me how to make your website public.</p>
+        
+        <p>The short answer is, you must deploy your website to a <b>hosting service.</b></p>
+        <p>You can do this <span style="color:green;">for free, <b>today, </b></span> but if you want a custom website name like <code>eric.ai</code> or <code>daryl.com</code>, or if you want e-commerce you will have to pay.</p>
+        <p>Here is a short walkthrough I made to guide you through it.</p>
+        <video controls style="width: 100%; max-width: 600px; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
+            <source src="how_to_use_github_pages.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>The complete answer is this webpage where I will walk you through the steps to make your website public, a.k.a. deploying your website.</p>
+        <h2 id="step-0-setup-and-explanation">Step 0: Setup & Explanation</h2>
+        <p><i>Before you spend any money, know the basics.</i></p><p>When you type a website name into your phone or computer, your computer is just asking another computer somewhere else for files. But first, it has to find the other computer using the <b>domain name system,</b> or <b>DNS</b>.</i> When you type something like <code>google.com</code>, all your computer is really doing is:
+        <ol>
+            <li>Asking the DNS for the IP address of <code>google.com</code> → 142.250.31.100 <a href="https://mxtoolbox.com/SuperTool.aspx?action=a%3aclassroom.google.com&run=toolpage">(this is Google's real IP btw)</a>.</li>
+            <li>Asking the computer at that IP address for files (i.e. <code>.html</code> files, <code>.js</code> files, <code>.css</code> files, images, sounds).</li>
+            <li>Waiting for the other computer to respond. (This sometimes takes a while, and causes long load times.)</li>
+            <li>Loading those files into your browser.</li>
+        </ol>
+        <p>By default, your browser will load the file called <code>index.html</code>.</p>
+        <p>Your job as the coding genius behind your website is to make this file named <code>index.html</code>, as well as the <code>.html</code> files for any other pages on your site, plus the JavaScript and CSS files. Then you must upload them to a hosting service; then you can connect your hosting service to the domain.</p>
+        <p>The good news is, if you've been through Fall Immersion, we've already done all this at the Hidden Genius Project -- <i>your portfolio website should be able to be deployed.</i> Double check to make sure you have a file named <code>index.html</code>. Make sure it links to the other pages on your site, otherwise your visitors will have no way to find the other pages.</p>
+        <p>The iffy news is, to my knowledge, none of you have coded a backend to your website yet. <a id="backend_reasons" href="backend_reasons.html">Click here to see a list of reasons you might need a backend</a>. But that also means you don't need to pay right now for hosting with backend.</p>
+    <div>
+        <h2 id="step-1-buy-a-domain">Step 1: Buy a Domain</h2>
+        <h3 style="color:green;">Skip this part for now if you're okay with not picking your site name.</h3>
+        <p>A domain is your website's name (e.g., <code>example.com</code>). Some have annoying hidden fees. Many offer your first year for cheaper. Here are some popular <b>domain registrars</b> where you can purchase one:</p>
+        <ul>
+            <li><a href="https://www.namecheap.com" target="_blank">Namecheap</a> - New customer special -- pay as little as $6.49 the first year.</li>
+            <li><a href="https://domains.squarespace.com" target="_blank">Squarespace Domains</a> - Easy to use. Your first year can be $9 (but it will be $20 next year).</li>
+            <li><a href="https://www.godaddy.com" target="_blank">GoDaddy</a> - A well-known option with hidden fees. They say they have discounts but the hidden fees are huge. For instance they claim they'll sell you a domain for 1¢, but I checked for you and you'll end up paying more like $50-100 after fees.</li>
+            <li><b>Free alternative:</b> Technically you don't need to buy a domain name, but your website will then use a "<b>subdomain</b>" of another website, like the one you're on right now, <code>coxtrent.github.io.</code> A custom domain looks more professional, and it's a good, small investment.</li>
+        </ul>
+
+        <p>When choosing a domain name, make it short and memorable like <a href="https://youtube.com">youtube.com</a>.</p>
+        <p>Some domain registrars also offer hosting services, which can simplify the setup process. For example, Namecheap and GoDaddy provide both domain registration and hosting.</p>
+        <p>When you buy a domain, you'll need to provide some personal information. <span style="color:darkred;">Please make sure the domain registrar provides <b>WHOIS privacy</b>, otherwise your personal information will be public and connected to your website.</span></p>
+        <p>I personally use Namecheap for another site.</p>
+        <h2 id="step-2-choose-hosting">Step 2: Choose a Hosting Service</h2>
+        <p>The domain registrar from the last step will tell your visitor's computer/phone where the website's files are, but a <b>hosting service</b> actually holds the files. Here are some beginner-friendly hosting services:</p>
+        <p>Right now you probably don't need a "backend" to your website.</p>
+        <p><a id="backend_reasons" href="backend_reasons.html">Click here to see a list of reasons you might need a backend</a> -- however, don't pay for a backend if you don't have backend code ready to drop.</p>
+        <ul>
+            <li><a href="https://docs.github.com/en/pages/quickstart" target="_blank">GitHub Pages</a> - <b>Free, BUT</b> you <b>won't have a backend</b>, so you won't be able to have logins or e-stores. Also, <b>you will need to know how to use Git on the command line.</b></li>
+            <li><a href="https://www.netlify.com" target="_blank">Netlify</a> - Great for static websites and free for small projects. Not easy to setup backend.</li>
+            <li><a href="https://www.hostinger.com" target="_blank">Hostinger</a> - Affordable and easy to use. Supports backend.</li>
+            <li><a href="https://www.heroku.com" target="_blank">Heroku</a> - Supports backend, but paid and more coding-heavy.</li>
+            <li><a href="https://www.vercel.com" target="_blank">Vercel</a> - Free tier available, but it's more coding-heavy.</li>
+            <li><a href="httpss://www.shopify.com" target="_blank">Shopify</a> - Best for e-commerce, but can be expensive.</li>
+            <li><a href="https://namecheap.com" target="_blank">Namecheap</a> - Affordable and easy to use. They have a free website builder, but it's not as good as the ones below.</li>
+        </ul>
+        <p>Some hosting services also offer domain registration, which can simplify the setup process.</p>
+        <p>I use GitHub Pages for this website and Heroku for my other website. Heroku cost $7 a month, and my website can run backend apps.</p>
+        <p><b>Do you not care what your website name is?</b> Use GitHub Pages. Lots of academics like you use GitHub Pages for portfolios.</p>
+        <p><b>Do you want a good-looking website name?</b> You can still use GitHub Pages but you will need to buy a domain.</p>
+        <p><b>Do you want to make money?</b> You gotta spend money to make money - you need to pay for a hosting service with backend, and a domain name. Shopify is expensive but it may be safer than setting up code to operate a store yourself. Just asking people to send money to your Cash App, Zelle, etc. might look sketchy and unprofessional. <b style="color:darkred;">Most importantly, make sure your backend is set up properly, or else you could get hacked and even sued for endangering other people's personal information.</b></p>
+    </div>
+
+        <h2 id="step-3-deploy-your-website">Step 3: Deploy Your Website</h2>
+        <p>Once you have a domain and hosting, it's time to deploy your website. Here are the basic steps:</p>
+        <ol>
+            <li>Upload your files to your hosting service. Most services have a simple drag-and-drop interface, and some use Git.</li>
+            <li>Connect your domain to your hosting service. Your hosting service will guide you through this. You're essentially updating the DNS (the system computers ask to translate website names to IPs), telling it where the files are located for your new domain name. It can take up to 24 hours for DNS changes to take effect.</li>
+        </ol> 
+        <p>You can make your website public <span style="color:green;"><b>today</b></span> using GitHub Pages. I walk you through it in the video I linked earlier.</p>
+        <p>Here is the code for the part where I ask you to use the Terminal (GitHub may ask you to login -- it will normally just open the browser and have you login. I was already logged in in the walkthrough video)</p>
+        <p>Paste your repository URL here to modify the code below: </p>
+        <input type="text" id="repo-url" placeholder="Enter your repository URL" style="width: 100%; padding: 10px; margin-bottom: 10px;" oninput="document.getElementById('paste-repo-url').textContent = this.value;">
+        <p>Now copy this. Then, paste it into your terminal.</p>
+        <pre style="background-color: lightyellow;"><code>
+    git init
+    git add .
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin <span id="paste-repo-url">&lt;FOLLOW INSTRUCTIONS ABOVE&gt;</span>
+    git push -u origin main<span></span>
+        </code></pre>
+        <p>For more questions, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages" target="_blank">GitHub Pages documentation</a>.</p>
+        <p>For other hosting services, check their documentation for specific instructions. Most have a user-friendly interface to help you upload files and set up your domain.</p>
+        <h2 id="step-4-test-your-website">Step 4: Test Your Website</h2>
+        <p>After deploying, visit your domain in a browser to ensure everything works as expected. Check for broken links, layout issues, and loading speed.</p>
+        <h3>Common Issues</h3>
+        <h5>Error: Your connection is not private</h5>
+        <p>This usually means you need to set up an SSL certificate. Most hosting services offer free SSL certificates through Let's Encrypt (my old college professor created Let's Encrypt, by the way).</p>
+        <h5>Website not loading</h5>
+        <p>Check your DNS settings and ensure your domain is correctly pointing to your hosting service. It can take some time for DNS changes to take effect.</p>
+        <h5>Files not found</h5>
+        <p>Ensure your files are correctly uploaded to the hosting service and that the file paths in your HTML are correct. Make sure you have an <code>index.html</code> file in the root directory of your website.</p>
+        <h5>Website looks different on mobile</h5>
+        <p>Make sure your website is responsive. Use CSS media queries to adjust the layout for different screen sizes. ChatGPT can help with this.</p>
+        <h5>Website loads slow</h5>
+        <p><b>Optimization</b> is a term used all over engineering that means to make things more efficient. If you are using custom files or files from Google Images, they might be too large to load fast. Try <b>optimizing your site's storage methods</b> by converting photos to smaller file types like <code>.webp</code> or <code>.avif</code>. You can also use a tool like <a href="https://tinypng.com" target="_blank">TinyPNG</a> to compress images without losing quality. Optimize videos too.</p>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Congratulations! Just by reading this guide you've taken the first steps to making a website that anyone can visit and taking your ideas closer to reality.</p>
+        <p>Remember you can always ask me for help in and outside of Immersion.</p>
+        <p>-Trenton</p>
+    </main>
+    <footer class="primer-spec-footer py-3">
+        <div class="container-lg">
+            <p style="color: black; background-color: yellow;">Genius revealed! 🚀</p>
+        </div>
+    </footer>
+</body>
+</html>
