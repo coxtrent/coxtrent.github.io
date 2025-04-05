@@ -47,7 +47,7 @@
         <h2>Table of Contents</h2>
         <ul>
             <li><a href="#introduction">Introduction</a></li>
-            <li><a href="step-0-setup-and-explanation">Step 0: Setup & Explanation</a></li>
+            <li><a href="#step-0-setup-and-explanation">Step 0: Setup & Explanation</a></li>
             <li><a href="#step-1-buy-a-domain">Step 1: Buy a Domain</a></li>
             <li><a href="#step-2-choose-hosting">Step 2: Choose Hosting</a></li>
             <li><a href="#step-3-deploy-your-website">Step 3: Deploy Your Website</a></li>
@@ -67,15 +67,17 @@
         <p>Some of you have asked me how to make your website public.</p>
         
         <p>The short answer is, you must deploy your website to a <b>hosting service.</b></p>
-        <p>You can do this <span style="color:green;">for free, <b>today, </b></span> but if you want a custom website name like <code>eric.ai</code> or <code>daryl.com</code>, or if you want e-commerce you will have to pay.</p>
+        <p>You can do this <span style="color:green;">for free, <b>today, </b></span> but if you want a custom website name like <code>eric.ai</code> or <code>daryl.com</code>, or if you want e-commerce you will have to spend $20-$50. (Got leftover stipend money?)</p>
         <p>Here is a short walkthrough I made to guide you through a free option.</p>
         <video controls style="width: 100%; max-width: 600px; margin: 20px 0; border: 1px solid #ccc; border-radius: 8px;">
             <source src="how_to_use_github_pages.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <p>The complete answer is this webpage where I will walk you through the steps to make your website public, a.k.a. deploying your website.</p>
+        <hr style="border: 1px solid #ccc; margin: 20px 0;">
         <h2 id="step-0-setup-and-explanation">Step 0: Setup & Explanation</h2>
-        <p><i>Before you spend any money, know the basics.</i></p><p>When you type a website name into your phone or computer, your computer is just asking another computer somewhere else for files. But first, it has to find the other computer using the <b>domain name system,</b> or <b>DNS</b>.</i> When you type something like <code>google.com</code>, all your computer is really doing is:
+        <p><i>Before you spend any money, know the basics.</i></p>
+        <p>When you type a website name into your phone or computer, your computer is just asking another computer somewhere else for files. But first, it has to find the other computer using the <b>domain name system,</b> or <b>DNS</b>.</i> When you type something like <code>google.com</code>, all your computer is really doing is:
         <ol>
             <li>Asking the DNS for the IP address of <code>google.com</code> → 142.250.31.100 <a href="https://mxtoolbox.com/SuperTool.aspx?action=a%3aclassroom.google.com&run=toolpage">(this is Google's real IP btw)</a>.</li>
             <li>Asking the computer at that IP address for files (i.e. <code>.html</code> files, <code>.js</code> files, <code>.css</code> files, images, sounds).</li>
@@ -87,6 +89,7 @@
         <p>The good news is, if you've been through Fall Immersion, we've already done all this at the Hidden Genius Project -- <i>your portfolio website should be able to be deployed.</i> Double check to make sure you have a file named <code>index.html</code>. Make sure it links to the other pages on your site, otherwise your visitors will have no way to find the other pages.</p>
         <p>The iffy news is, to my knowledge, none of you have coded a backend to your website yet. <a id="backend_reasons" href="backend_reasons.html">Click here to see a list of reasons you might need a backend</a>. But that also means you don't need to pay right now for hosting with backend.</p>
     <div>
+        <hr style="border: 1px solid #ccc; margin: 20px 0;">
         <h2 id="step-1-buy-a-domain">Step 1: Buy a Domain</h2>
         <h3 style="color:green;">Skip this part for now if you're okay with not picking your site name.</h3>
         <p>A domain is your website's name (e.g., <code>example.com</code>). Some have annoying hidden fees. Many offer your first year for cheaper. Here are some popular <b>domain registrars</b> where you can purchase one:</p>
@@ -101,6 +104,7 @@
         <p>Some domain registrars also offer hosting services, which can simplify the setup process. For example, Namecheap and GoDaddy provide both domain registration and hosting.</p>
         <p>When you buy a domain, you'll need to provide some personal information. <span style="color:darkred;">Please make sure the domain registrar provides <b>WHOIS privacy</b>, otherwise your personal information will be public and connected to your website.</span></p>
         <p>I personally use Namecheap for another site.</p>
+        <hr style="border: 1px solid #ccc; margin: 20px 0;">
         <h2 id="step-2-choose-hosting">Step 2: Choose a Hosting Service</h2>
         <p>The domain registrar from the last step will tell your visitor's computer/phone where the website's files are, but a <b>hosting service</b> actually holds the files. Here are some beginner-friendly hosting services:</p>
         <p>Right now you probably don't need a "backend" to your website.</p>
@@ -120,17 +124,17 @@
         <p><b>Do you want a good-looking website name?</b> You will need to buy a domain.</p>
         <p><b>Do you want your site visitors to be able to make purchases with a card?</b> You gotta spend money to make money - you need to pay for a hosting service with backend, and a domain name. Shopify is expensive but it may be safer than setting up code to operate a store yourself. Just asking people to send money to your Cash App, Zelle, etc. might look sketchy and unprofessional. <b style="color:darkred;">Most importantly, make sure your backend is set up properly, or else you could get hacked and even sued for endangering other people's personal information.</b></p>
     </div>
-
+        <hr style="border: 1px solid #ccc; margin: 20px 0;">
         <h2 id="step-3-deploy-your-website">Step 3: Deploy Your Website</h2>
         <p>Once you have a domain and hosting, it's time to deploy your website. Here are the basic steps:</p>
         <ol>
             <li>Upload your files to your hosting service. Most services have a simple drag-and-drop interface, and some use Git.</li>
-            <li>Connect your domain to your hosting service. Your hosting service will guide you through this. You're essentially updating the DNS (the system computers ask to translate website names to IPs), telling it where the files are located for your new domain name. It can take up to 24 hours for DNS changes to take effect.</li>
+            <li>Update the DNS (the address book of the internet), telling it where the files are located for your new domain name. Your hosting provider and domain registrar will walk you through this, and they all do it a little differently. It can take up to 24 hours for DNS changes to take effect.</li>
         </ol> 
         <p>You can make your website public <span style="color:green;"><b>today</b></span> using GitHub Pages. I walk you through it in the video I linked earlier.</p>
         <p>Here is the code for the part where I ask you to use the Terminal (GitHub may ask you to login -- it will normally just open the browser and have you login. I was already logged in in the walkthrough video)</p>
         <p>Paste your repository URL below: </p>
-        <input type="text" id="repo-url" placeholder="Enter your repository URL" style="width: 100%; padding: 10px; margin-bottom: 10px;" oninput="document.getElementById('paste-repo-url').textContent = this.value;">
+        <input type="text" id="repo-url" placeholder="Enter your repository URL" style="width: 100%; padding: 10px; margin-bottom: 10px;" oninput="document.getElementById('paste-repo-url').textContent = this.value ? this.value : '<FOLLOW INSTRUCTIONS ABOVE>';">
         <p>Now copy this. Then, paste it into your terminal.</p>
         <pre style="background-color: lightyellow;"><code>
     git init
@@ -142,8 +146,10 @@
         </code></pre>
         <p>For more questions, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages" target="_blank">GitHub Pages documentation</a>.</p>
         <p>For other hosting services, check their documentation for specific instructions. Most have a user-friendly interface to help you upload files and set up your domain.</p>
+        <hr style="border: 1px solid #ccc; margin: 20px 0;">
         <h2 id="step-4-test-your-website">Step 4: Test Your Website</h2>
         <p>After deploying, visit your domain in a browser to ensure everything works as expected. Check for broken links, layout issues, and loading speed.</p>
+        <p>Remember, a website that clearly doesn't work how it was meant to can look unprofessional.</p>
         <h3>Common Issues</h3>
         <h5>Error: Your connection is not private</h5>
         <p>This usually means you need to set up an SSL certificate. Most hosting services offer free SSL certificates through Let's Encrypt (my old college professor created Let's Encrypt, by the way).</p>
