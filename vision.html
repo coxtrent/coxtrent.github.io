@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision App</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .start-button {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .message {
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="start-button" id="startButton">start</button>
+    </div>
+    <div class="message" id="message" style="display: none;"></div>
+
+    <script>
+        document.getElementById('startButton').addEventListener('click', () => {
+            try {
+                const response = fetch('https://api.sunboyforever.com/vision');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = response.json();
+                document.querySelector('.button-container').style.display = 'none';
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = data.message;
+                messageDiv.style.display = 'block';
+            } catch (error) {
+                console.error('Error fetching message:', error);
+            }
+        });
+    </script>
+</body>
+</html>
