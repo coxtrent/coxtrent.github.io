@@ -46,7 +46,20 @@
     <script>
         document.getElementById('startButton').addEventListener('click', () => {
             try {
-                const response = fetch('https://api.sunboyforever.com/vision');
+                const response = fetch('https://api.sunboyforever.com/vision')
+                .then(response => {
+                    console.log("Response status:", response.status); // Logs the status code
+                    if (!response.ok) {
+                    console.error("Response not OK:", response.statusText); // Logs the status text if the response is not OK
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Response data:", data); // Logs the response data
+                })
+                .catch(error => {
+                    console.error("Fetch error:", error); // Logs any fetch errors
+                });;
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
