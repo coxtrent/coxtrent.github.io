@@ -26,7 +26,7 @@
             border-radius: 50%;
             background-color: red;
             color: white;
-            font-size: 50px;
+            font-size: 80px;
             font-weight: bold;
             border: none;
             cursor: pointer;
@@ -41,7 +41,7 @@
     <div class="button-container">
         <button class="start-button" id="startButton">start</button>
     </div>
-    <div class="message" id="message" style="display: none;"></div>
+    <div class="message" id="message" style="display: none;font-size:50px;"></div>
 
     <script>
         document.getElementById('startButton').addEventListener('click', () => {
@@ -63,6 +63,9 @@
                 })
                 .catch(error => {
                     console.error("Fetch error:", error); // Logs any fetch errors
+                    const startButton = document.getElementById('startButton'); // Reference the button
+                    startButton.textContent = 'error'; // Change button text to 'Error'
+                    startButton.style.backgroundColor = 'gray'; // Change button color to gray
                 });
             } catch (error) {
                 console.error('Error displaying message:', error);
