@@ -56,15 +56,14 @@
                 })
                 .then(data => {
                     console.log("Response data:", data); // Logs the response data
+                    document.querySelector('.button-container').style.display = 'none';
+                    const messageDiv = document.getElementById('message');
+                    messageDiv.textContent = data.message; // Display the message from the API
+                    messageDiv.style.display = 'block'; // Logs the response data
                 })
                 .catch(error => {
                     console.error("Fetch error:", error); // Logs any fetch errors
-                });;
-                const data = response.json();
-                document.querySelector('.button-container').style.display = 'none';
-                const messageDiv = document.getElementById('message');
-                messageDiv.textContent = data.message;
-                messageDiv.style.display = 'block';
+                });
             } catch (error) {
                 console.error('Error displaying message:', error);
             }
