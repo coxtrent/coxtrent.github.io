@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIOLET | 2021 Lookbook</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="aavariq-threads-blk.png" width="40" height="40" />
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="product-page">
+    <div class="product-container">
+      
+      <!-- Left: Product Image -->
+      <div class="product-image">
+        <img src="BACK.JPEG"/>
+      </div>
+
+      <div class="product-image">
+        <img src="ch.JPEG"/>
+      </div>
+      <!-- Right: Product Info -->
+      <div class="product-details">        
+        <h1 class="product-title"   style="color: black;">HEAVEN SENT</h1>
+        <p class="product-brand" style="color: black;">Aavariq Threads Hoodie</p>
+        <p class="product-price" style="color: black;" >$105.00</p>
+        <p class="installments">100% cotton fleece, long sleeves, true to size, slightly cropped, <strong>400 gsm</strong></p>
+
+        <div class="product-style">
+         
+        </div>
+  
+        <div class="product-color">
+    
+          <!-- Add swatches or thumbnails if you want -->
+        
+  
+        <div class="product-size">
+          <p><strong>SIZE:</strong></p>
+          <div class="size-options">
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+          </div>
+        </div>
+  
+        <div class="quantity-selector">
+          <p><strong>QUANTITY:</strong></p>
+          <div class="qty-buttons">
+            <button>-</button>
+            <input type="text" value="1" readonly />
+            <button>+</button>
+          </div>
+        </div>
+  
+        <button class="add-to-cart" style="background-color: black; color: white;" id="contact-button">Contact to Purchase</button>
+        <p style="text-align: left; font-family: 'DM Sans', sans-serif; font-size: 30px;">
+            <b style="color: red;">Do not use a dryer after washing.</b><br>
+          For best results, hang garments to air dry to preserve quality.</p> 
+        <p id="button-message"></p>
+                <script>
+        document.getElementById('contact-button').addEventListener('click', function() {
+          // Get selected size
+          const sizeBtns = document.querySelectorAll('.size-options button');
+          let selectedSize = null;
+          sizeBtns.forEach(btn => {
+            if (btn.classList.contains('selected')) {
+              selectedSize = btn.textContent;
+            }
+          });
+
+          // Get quantity
+          const qty = document.querySelector('.qty-buttons input').value;
+
+          if (!selectedSize) {
+            document.getElementById('button-message').style.color = 'red';
+            document.getElementById('button-message').textContent = 'Please select a size.';
+            return;
+          }
+          else{
+            document.getElementById('button-message').textContent = '';
+            document.getElementById('contact-button').textContent = 'Preparing email...';
+            document.getElementById('contact-button').style.backgroundColor = 'green';
+          }
+
+          const subject = encodeURIComponent('Aavariq Threads Purchase Inquiry');
+          const body = encodeURIComponent(
+            `Hello,\n\nI would like to purchase the HEAVEN SENT hoodie.\n\nSize: ${selectedSize}\nQuantity: ${qty}\n\nPlease let me know how to proceed.\n\nThank you!`
+          );
+          window.location.href = `mailto:aavariqthreads@gmail.com?subject=${subject}&body=${body}`;
+        });
+        </script>
+      </div>
+  
+    </div>
+  </main>
+
+
+  <div class="translucent-box" style="color:rgb(0, 0, 0);  padding-top: 6cm;">
+    <div>
+      <p>
+        To ensure a smooth shopping experience with AAVARIQ THREADS, please provide accurate information when placing your order. Correct details help us process your order efficiently and minimize delays. Orders suspected of fraudulent activity will be canceled.
+      </p>
+      <p>
+        Please double-check your shipping information before submitting your order. <strong>All sales are final; we do not accept returns.</strong>
+      </p>
+      <p>
+        We collect your name, email address, shipping and billing address, and payment information solely for order processing. We implement appropriate technical and organizational security measures to protect your personal information.
+      </p>
+      <p>
+        If our site contains links to other websites, please note that we are not responsible for their privacy practices.
+      </p>
+      <p>
+        The latest clothing products will always be posted on our website.
+      </p>
+      <p>
+        If you have any questions, please contact us at <a href="mailto:aavariqthreads@gmail.com">aavariqthreads@gmail.com</a>.
+      </p>
+    </div>
+
+  
+ 
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const minusBtn = document.querySelector('.qty-buttons button:first-child');
+      const plusBtn = document.querySelector('.qty-buttons button:last-child');
+      const qtyInput = document.querySelector('.qty-buttons input');
+  
+      minusBtn.addEventListener('click', () => {
+        let current = parseInt(qtyInput.value);
+        if (current > 1) {
+          qtyInput.value = current - 1;
+        }
+      });
+  
+      plusBtn.addEventListener('click', () => {
+        let current = parseInt(qtyInput.value);
+        qtyInput.value = current + 1;
+      });
+    });
+  </script>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sizeButtons = document.querySelectorAll('.size-options button');
+  
+      sizeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          sizeButtons.forEach(btn => btn.classList.remove('selected'));
+          button.classList.add('selected');
+        });
+      });
+    });
+  </script>
+  
+  <style>
+    .size-options button.selected {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+  
+
+
+  
+
+ 
