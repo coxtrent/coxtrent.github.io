@@ -67,7 +67,8 @@
 <body>
     <header>
         <h1>Trenton Cox</h1>
-        <p>Computer scientist, audio engineer, mentor, artist.</p>
+        <h2 style="color:rgb(204, 204, 204);">Computer scientist, audio engineer, artist.</h2>
+        <h3>trentoncox@proton.me | 773-VIR-TUAL</h3>
     </header>
     <main>
         <section class="image">
@@ -78,17 +79,46 @@
         </section>
         <section class="bio">
             <!-- TODO: Write a single paragraph personal bio -->
-            <p>I am a computer science educator and audio engineer from Michigan, holding a bachelor's degree in computer science from the University of Michigan-Ann Arbor. I am currently based in Chicago.</p>
-            <p>I am also a multi-instrumentalist who has been writing and producing for 15 years. I also enjoy Chinese philosophy, working out, exploring the city, and watching Mario streamers.</p>
+            <h3>About Me</h3>
+            <p>I hold a bachelor's degree in computer science from the University of Michigan-Ann Arbor, where I graduated in 2024. I am currently based in Chicago.</p>
+            <p>As a lifelong musician I am highly interested in the intersection between musical artistry and technology.</p>
         </section>
-        <section class="bio">Take a look at <b><a id="vision" href="vision.html">vision</a></b>, a web app for making shareable journey maps. You can look at mine and even make your own!</section>
+        <section class="bio">
+            <h1>My Projects</h1>
+            <p>Each of these projects was led and solely architected and developed by myself.</p>
+            <div>
+                <h2>Synesthesia</h2>
+                <video><source></video>
+                <h4><i>Interactive audio-visual experience</i></h4>
+                <p style="color:gray;"><i>C++, MIDI/realtime music, embedded software, Arduino framework, PlatformIO, ESP-32, circuitry; procedurally generated visuals driven by music; </i></p>
+                <p>Embedded program that runs on the ESP-32 microcontroller using the Arduino framework. Procedurally generates a creative LED light show in sync with the music using realtime MIDI-USB or audio-spectral data. The lights can also display custom animations.</p>
+                <p>My foray into this class of hardware marks my first exploration of embedded systems and microcontrollers, and deepened the understanding of circuitry and electronic principles I had already from music production.</p>
+                <h2>LocalTrader</h2>
+                <video><source></video>
+                <h4><i>Grindr for Magic: The Gathering Players</i></h4>
+                <p style="color:gray;"><i>React Native, Python Django, PostGIS (PostgreSQL with specialized geospatial), developed with Expo, Docker, Uvicorn, includes custom auth middleware for secure WebSockets connections</i></p>
+                <p>Geospatial app for helping trading card game players connect with each other for trades and socialization.</p>
+                <p>Architected custom security middlewares for solving the authentication problem over wss://, a.k.a. WebSockets (whose request cannot include an encrypted request body in which to send an authentication token), used for real-time chats, supported by Redis cache for maintaining perpetuity of user connection.</p>
+                <p>Architected geospatial queries for finding nearby users, using PostGIS and Django ORM</p>
+                <p>Architected interface for posting card trades that compares user-set prices to market price using popular TCG APIs.</p>
+            </div>
+            <div>
+               
+                <h2>Futurecore (Pre-Demo): RPG game with custom internal tooling</h2>
+                 <video><source></video>
+                <h4><i>Pre-demo, a love letter to the genre, and exploration of efficient development techniques.</i></h4>
+                <p style="color:gray;"><i>
+Unity, C#, custom internal tooling for efficient development, including a custom graph editor in Python Tkinter for scripting dialogue trees and more, automatically renders dialogue directly into game
+                </i></p>
+                <p>Geospatial app for helping trading card game players connect with each other for trades and socialization.</p>
+                <p>Architected custom security middlewares for solving the authentication problem over wss://, a.k.a. WebSockets (whose request cannot include an encrypted request body in which to send an authentication token), used for real-time chats, supported by Redis cache for maintaining perpetuity of user connection.</p>
+                <p>Architected geospatial queries for finding nearby users, using PostGIS and Django ORM</p>
+                <p>Architected interface for posting card trades that compares user-set prices to market price using popular TCG APIs.</p>
+            </div>
+           
+        </section>
     </main>
-    <section style="margin-left:17.5%;">
-    <h3>Computer Science Resources</h3>
-    <li><a href="make_website_public.html">How to Make Your Website Public</a></li>
-    </section>
     <footer>
-        <p>Disclaimer: This is a personal website, not a Hidden Genius Project website. All logos and trademarks are the property of their respective owners.</p>
     </footer>
 </body>
 </html>
